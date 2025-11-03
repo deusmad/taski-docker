@@ -1,5 +1,5 @@
-from pathlib import Path
 import os
+from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -8,7 +8,7 @@ SECRET_KEY = os.getenv('SEC_KEY')
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1','taskipetproj.servehttp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'taskipetproj.servehttp.com']
 
 
 # Application definition
@@ -62,7 +62,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-	'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('POSTGRES_DB', 'django'),
         'USER': os.getenv('POSTGRES_USER', 'django'),
         'PASSWORD': os.getenv('POSTGRES_PASSWORD', ''),
